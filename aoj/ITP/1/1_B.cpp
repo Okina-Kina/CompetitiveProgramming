@@ -1,12 +1,13 @@
 #include<iostream>
+#include<cmath>
 
 using namespace std;
 
 int main(){
-    int n;
-    cin >> n;
-
-    int ans = 0;
+    int x;
+    cin >> x;
+    
+    int ans = pow(x,3);
 
     cout << ans << endl;
 
