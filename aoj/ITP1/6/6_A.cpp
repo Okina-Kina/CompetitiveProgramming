@@ -10,9 +10,19 @@ int main(){
     int n;
     cin >> n;
 
-    int ans = 0;
+    vector<int> a(n);
 
-    cout << ans << endl;
+    for(int i = 0; i < n; i++)
+        cin >> a[i];
+
+
+    for(int i = a.size() - 1; 0 <= i; i--){
+        cout << a[i];
+
+        if(i != 0) 
+          cout << " ";
+    }
+    cout << endl;
 
     return 0;
 }
