@@ -18,7 +18,6 @@ class Dice{
 
         void setLabel(int labelPos, int label){
             if(m_LABEL_SIZE <= labelPos) return;
-
             m_labels.at(labelPos) = label;
         }
 
@@ -65,11 +64,28 @@ class Dice{
                     break;
             }
         }
+
+        bool isSame(Dice d1, Dice d2){
+            for(int i = 0; i < m_LABEL_SIZE; i++){               
+                if(d1.getLabelByIndex(i) != d2.getLabelByIndex(i))
+                    return false;
+            }
+            return true;
+        }
+
+        void showDice(){
+            for(int i = 0; i < m_LABEL_SIZE; i++){
+                cout << "i: " << i << " - " << m_labels.at(i) << endl;
+            }
+            cout << endl;
+        }
 };
 
 int main(){
     Dice d1 = Dice();
     Dice d2 = Dice();
+
+    string direction = "ENSW";
 
     for(int i = 0; i < 6; i++){
         int n;
@@ -83,8 +99,23 @@ int main(){
         d2.setLabel(i, n);
     }
 
-    // if(d1.isEqual(d1, d2)) cout << "Yes" << endl;
-    // else cout << "No" << endl;
+    bool isSame = false;
+    for(int i = 0; i < 4; i++){
+        d2.rotate('N');              
+        for(int j = 0; j < 4; j++) {
+            d2.rotate('E');              
+            for(int k = 0; k < 4; k++){
+                d2.rotate('N');               
+                if(d1.isSame(d1, d2)){
+                    isSame = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    if(isSame) cout << "Yes" << endl;
+    else cout << "No" << endl;
 
     return 0;
 }
