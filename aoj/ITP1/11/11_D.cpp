@@ -99,14 +99,14 @@ int main(){
     bool isNotSame = true;
 
     for(int i = 0; i < n; i++){
-        for(int m = i+1; m < n; m++){
-            for(int j = 0; j < 4; j++){
-                dices.at(m).rotate('N');              
-                for(int k = 0; k < 4; k++) {
-                    dices.at(m).rotate('E');              
+        for(int j = i+1; j < n; j++){
+            for(int k = 0; k < 4; k++){
+                dices.at(j).rotate('N');              
+                for(int l = 0; l < 4; l++) {
+                    dices.at(j).rotate('E');              
                     for(int l = 0; l < 4; l++){
-                        dices.at(m).rotate('N');               
-                        if(dices.at(i).isSame(dices.at(i), dices.at(m))){
+                        dices.at(j).rotate('N');               
+                        if(dices.at(i).isSame(dices.at(i), dices.at(j))){
                             isNotSame = false;
                             break;
                         }
