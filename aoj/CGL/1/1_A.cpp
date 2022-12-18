@@ -37,7 +37,7 @@ class Vec2{
 /// @param v1 
 /// @param v2 
 /// @return 
-double calc_product(Vec2 v1, Vec2 v2){
+double calc_dot(Vec2 v1, Vec2 v2){
     return (v1.x * v2.x + v1.y * v2.y);
 }
 
@@ -57,7 +57,7 @@ int main(){
         p = Vec2(x,y);
 
         // 正射影ベクトルの係数
-        double k = calc_product(p-p1, p2-p1) / pow((p2-p1).get_norm(),2);
+        double k = calc_dot(p-p1, p2-p1) / pow((p2-p1).get_norm(),2);
 
         // 射影後のベクトル
         Vec2 v = (p2 - p1) * k + p1;
