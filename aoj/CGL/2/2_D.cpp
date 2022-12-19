@@ -180,7 +180,7 @@ bool is_parallel(Line l1, Line l2) {
 }
 
 //-------------------------------------------------------
-/// @brief 
+/// @brief 2点間の距離
 /// @param p1 
 /// @param p2 
 /// @return 
@@ -190,7 +190,7 @@ double calc_distance(Vec2 p1, Vec2 p2) {
 }
 
 //-------------------------------------------------------
-/// @brief 
+/// @brief 線と点の距離
 /// @param p1 
 /// @param p2 
 /// @return 
