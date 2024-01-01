@@ -1,23 +1,12 @@
 #include<iostream>
-#include<algorithm>
-#include<vector>
-#include<map>
 
 using namespace std;
 
 int main(){
-    vector<int> x;
-    int tmp;
+    const int N = 1000;
 
-    while(true){
-        cin >> tmp;
-        if(tmp == 0)break;
-        
-        x.push_back(tmp);
-    }
-
-    for(int i = 0; i < x.size(); i++){
-        cout << "Case " << i+1 << ": " << x[i] << endl;
+    for(int i = 0; i < N; i++){
+        cout << "Hello World" << endl;
     }
 
     return 0;
