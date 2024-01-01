@@ -12,6 +12,6 @@ int main() {
         sum += (n - '0');
 
     cout << sum << endl;
-    
+
     return 0;
 }
