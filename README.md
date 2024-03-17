@@ -1,5 +1,5 @@
 # CompetitiveProgramming
-各言語の入門程度の問題の回答集
+チュートリアルがてら遊んでるやつ集
 
 ## Environments:
 + C++    : 14  / VScode
